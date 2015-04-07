@@ -1,0 +1,7 @@
+deploy:
+  provider: heroku
+  api_key:
+    secure: R0to87oz/H7Se9yzOWTvI1Hk/uq/DzPV1p9b0279BRT2a12e1NJTylAowrXHsHfP62zplIiJaWy0OtNZwb7j4QXuCmcep5FfdB5TF1RzB4UAdZhz8MmAhk6nCnRiFm+yO8TWwd4L0VW2yWUMnqY7JNbgf6MY1UlOfmAAbWopOfA=
+  app: power-grids
+  on:
+    repo: hemetsu/power-grids
