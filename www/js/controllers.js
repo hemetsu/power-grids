@@ -1,20 +1,16 @@
-angular.module('starter.controllers', [])
+angular.module('PGControllers', [])
 
-.controller('DashCtrl', function($scope) {})
-
-.controller('ChatsCtrl', function($scope, Chats) {
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  }
+.controller('MainCtrl', function($scope) {
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+.controller('SetupCtrl', function($scope) {
 })
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
+.controller('CalculatorCtrl', function($scope) {
+})
+
+.controller('TimerCtrl', function($scope) { 
+})
+
+.controller('FaqCtrl', function($scope, $stateParams) {
 });
