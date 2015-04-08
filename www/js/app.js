@@ -18,24 +18,47 @@ angular.module('powerGrid', ['ionic', 'PGControllers', 'PGServices'])
 
   $stateProvider
 
-  .state('main', {
-      url : '/main',
-      templateUrl : 'templates/mainContainer.html',
-      abstract : true,
-      controller : 'MainCtrl'
+  .state('setup', {
+      url : '/setup',
+      views: {
+        'main': {
+            templateUrl : 'templates/setup.html',
+            abstract : true
+        }
+      }
   })
 
-  .state('main.setup', {
-      url: '/setup',
+  .state('setup.phase1', {
+      url: '/phase1',
       views: {
-          'main': {
-              templateUrl: 'templates/setup.html',
+          'phase1': {
+              templateUrl: 'templates/tab-phase1.html',
               controller : 'SetupCtrl'
           }
       }
   })
 
-  .state('main.calculator', {
+  .state('setup.phase2', {
+      url: '/phase2',
+      views: {
+          'phase2': {
+              templateUrl: 'templates/tab-phase2.html',
+              controller : 'SetupCtrl'
+          }
+      }
+  })
+
+  .state('setup.phase3', {
+      url: '/phase3',
+      views: {
+          'phase3': {
+              templateUrl: 'templates/tab-phase3.html',
+              controller : 'SetupCtrl'
+          }
+      }
+  })
+
+  .state('calculator', {
       url: '/calculator',
       views: {
           'main': {
@@ -45,7 +68,7 @@ angular.module('powerGrid', ['ionic', 'PGControllers', 'PGServices'])
       }
   })
 
-  .state('main.timer', {
+  .state('timer', {
        url: '/timer',
        views: {
            'main': {
@@ -55,7 +78,7 @@ angular.module('powerGrid', ['ionic', 'PGControllers', 'PGServices'])
        }
   })
 
-  .state('main.faq', {
+  .state('faq', {
        url: '/faq',
        views: {
            'main': {
@@ -66,6 +89,6 @@ angular.module('powerGrid', ['ionic', 'PGControllers', 'PGServices'])
   })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/main/timer');
+  $urlRouterProvider.otherwise('/setup/phase1');
 
 });
