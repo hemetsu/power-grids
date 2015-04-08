@@ -28,6 +28,16 @@ angular.module('powerGrid', ['ionic', 'PGControllers', 'PGServices'])
       }
   })
 
+  .state('setup.config', {
+      url: '/config',
+      views: {
+          'config': {
+              templateUrl: 'templates/tab-config.html',
+              controller : 'SetupCtrl'
+          }
+      }
+  })
+
   .state('setup.phase1', {
       url: '/phase1',
       views: {
@@ -89,6 +99,6 @@ angular.module('powerGrid', ['ionic', 'PGControllers', 'PGServices'])
   })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/setup/phase1');
+  $urlRouterProvider.otherwise('/setup/config');
 
 });
