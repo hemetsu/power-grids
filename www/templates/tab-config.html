@@ -1,5 +1,33 @@
 <ion-view view-title="Configuration">
-  <ion-content has-header="true" padding="true">
-  	<h2>Configuration Content</h2>
+  <ion-content has-header="true">
+  	
+  	<!-- Number of players -->
+  	<div class="list">
+  		<div class="item item-input item-select">
+  			<div class="input-label">
+				Number of Players
+			</div>
+			<select>
+				<option ng-repeat="val in players">{{ val }}</option>
+			</select>
+  		</div>
+  		<div class="item item-input item-select">
+  			<div class="input-label">
+				Map
+			</div>
+			<select>
+				<option ng-repeat="map in maps">{{ map.name }}</option>
+			</select>
+  		</div>
+  		<div class="item item-input item-select">
+  			<div class="input-label">
+				Deck
+			</div>
+			<select>
+				<option ng-repeat="deck in decks">{{ deck.name }}</option>
+			</select>
+  		</div>
+	</div>
+
   </ion-content>
 </ion-view>
