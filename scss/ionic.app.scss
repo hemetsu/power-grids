@@ -37,3 +37,34 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 		}
 	}
 }
+
+.item-checkbox-group {
+	padding: 6px 0 5px 16px;
+	.checkbox-group {
+		position: absolute;
+		right: 0;
+		top: 0;
+		max-width: 80%;
+	}
+}
+
+.checkbox {
+	&.red {
+		background-color: #FF0000;
+	}
+	&.black {
+		background-color: #000000;
+	}
+	&.blue {
+		background-color: #0000FF;
+	}
+	&.yellow {
+		background-color: #FFFF00;
+	}
+	&.purple {
+		background-color: #5F04B4;
+	}
+	&.green {
+		background-color: #0B610B;
+	}
+}

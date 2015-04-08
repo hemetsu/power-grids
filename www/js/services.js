@@ -1,7 +1,25 @@
 angular.module('PGServices', [])
 
+.factory('Utilities', function() {
+  return {
+    randomSelect : function(array, num) {
+      var results = [];
+      var tempArray = array;
+      while (num > 0) {
+        var index = Math.floor(Math.random() * tempArray.length);
+        results.push(tempArray[index]);
+        tempArray.splice(index);
+        num--;
+      }
+      return results;
+    }
+  };
+})
+
 .factory('Resources', function() {
   
+  /* Constants */
+
   var gerregions = { colors:'521043', bad:'SceqVfrgsv',
       names: [ 'North West', 'North East', 'Central West', 'Central East', 'South West', 'South' ] };
   var usaregions = { colors:'350126', bad:'ScYqVfZr[sv',
@@ -97,6 +115,10 @@ angular.module('PGServices', [])
 
   var players = [2, 3, 4, 5, 6];
 
+  var limits = [ [7,18], null, [10,21], [7,17], [7,17], [7,15], [6,14]];
+  var limitsbig = [ [8,21], null, [12,24], [8,20], [8,20], [8,18], [7,15]];
+  var limitsbad = [ [6,18], null, [9,21], [6,17], [6,17], [6,15], [5,14]];
+
   return {
     getMaps: function() {
       return maps;
@@ -106,6 +128,9 @@ angular.module('PGServices', [])
     },
     getPlayers: function() {
       return players;
+    },
+    getLimits: function() {
+      return limits;
     }
   };
 });

@@ -7607,3 +7607,24 @@ a.button {
   font-weight: bold;
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+
+.item-checkbox-group {
+  padding: 6px 0 5px 16px; }
+  .item-checkbox-group .checkbox-group {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 80%; }
+
+.checkbox.red {
+  background-color: #FF0000; }
+.checkbox.black {
+  background-color: #000000; }
+.checkbox.blue {
+  background-color: #0000FF; }
+.checkbox.yellow {
+  background-color: #FFFF00; }
+.checkbox.purple {
+  background-color: #5F04B4; }
+.checkbox.green {
+  background-color: #0B610B; }
