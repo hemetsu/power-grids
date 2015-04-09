@@ -113,7 +113,7 @@ angular.module('PGServices', [])
     { id: 'D', name: 'Deluxe Deck' },
   ];
 
-  var players = [2, 3, 4, 5, 6];
+  var players = ['red', 'blue', 'black', 'purple', 'green', 'yellow'];
 
   var limits = [ [7,18], null, [10,21], [7,17], [7,17], [7,15], [6,14]];
   var limitsbig = [ [8,21], null, [12,24], [8,20], [8,20], [8,18], [7,15]];

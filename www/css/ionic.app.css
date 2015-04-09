@@ -7609,12 +7609,23 @@ a.button {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
 
 .item-checkbox-group {
-  padding: 6px 0 5px 16px; }
+  padding: 0; }
+  .item-checkbox-group .checkbox-label {
+    float: left;
+    line-height: 42px;
+    padding: 0 0 0 16px; }
   .item-checkbox-group .checkbox-group {
-    position: absolute;
-    right: 0;
-    top: 0;
-    max-width: 80%; }
+    float: right; }
+    .item-checkbox-group .checkbox-group .checkbox {
+      display: block;
+      float: left; }
+      .item-checkbox-group .checkbox-group .checkbox input:before {
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        background: transparent;
+        border: 0 none; }
+      .item-checkbox-group .checkbox-group .checkbox input:after {
+        border-width: 0 0 2px 2px; }
 
 .checkbox.red {
   background-color: #FF0000; }
@@ -7624,6 +7635,8 @@ a.button {
   background-color: #0000FF; }
 .checkbox.yellow {
   background-color: #FFFF00; }
+  .checkbox.yellow input:after {
+    border-color: #CCCCCC; }
 .checkbox.purple {
   background-color: #5F04B4; }
 .checkbox.green {

@@ -39,12 +39,28 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .item-checkbox-group {
-	padding: 6px 0 5px 16px;
+	padding: 0;
+	.checkbox-label {
+		float: left;
+		line-height: 42px;
+		padding: 0 0 0 16px;
+	}
 	.checkbox-group {
-		position: absolute;
-		right: 0;
-		top: 0;
-		max-width: 80%;
+		float: right;
+		.checkbox  {
+			display: block;
+			float: left;
+			input {
+				&:before {
+					@include border-radius(0);
+					background: transparent;
+					border: 0 none;
+				}
+				&:after {
+					border-width: 0 0 2px 2px;
+				}
+			}
+		}
 	}
 }
 
@@ -60,6 +76,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	}
 	&.yellow {
 		background-color: #FFFF00;
+		input:after {
+			border-color: #CCCCCC;
+		}
 	}
 	&.purple {
 		background-color: #5F04B4;

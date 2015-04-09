@@ -2,33 +2,20 @@
   <ion-content has-header="true">
   	
   	<div class="list">
-  		<!-- <div class="item item-input item-select">
-  			<div class="input-label">Number of Players</div>
-			<select ng-options="player as player for player in players" ng-model="sPlayers" ng-change="update()"></select>
-  		</div> -->
   		<div class="item item-checkbox-group">
-  			<div class="input-label">Players</div>
+  			<div class="checkbox-label">
+  				Players
+  			</div>
   			<div class="checkbox-group">
-	  			<label class="checkbox checkbox-stable red">
-				   <input type="checkbox">
-				</label>
-				<label class="checkbox checkbox-stable black">
-				   <input type="checkbox">
-				</label>
-				<label class="checkbox checkbox-stable blue">
-				   <input type="checkbox">
-				</label>
-				<label class="checkbox checkbox-stable yellow">
-				   <input type="checkbox">
-				</label>
-				<label class="checkbox checkbox-stable green">
-				   <input type="checkbox">
-				</label>
-				<label class="checkbox checkbox-stable purple">
-				   <input type="checkbox">
-				</label>
+  				<label ng-repeat="player in players" class="checkbox checkbox-stable {{ player }}">
+  					<input type="checkbox" name="players" value="{{ player }}" ng-checked="sPlayers.indexOf(player) > -1" ng-click="update()">
+  				</label>
 			</div>
   		</div>
+  		<!-- <div class="item item-input item-select">
+  			<div class="input-label">Number of Players</div>
+			<select ng-options="player as player for player in players" ng-model="sPlayers" ng-change="update()" disabled></select>
+  		</div> -->
   		<div class="item item-input item-select">
   			<div class="input-label">Map</div>
 			<select ng-options="map as map.name for map in maps" ng-model="sMap" ng-change="update()"></select>
@@ -37,9 +24,6 @@
   			<div class="input-label">Deck</div>
 			<select ng-options="deck as deck.name for deck in decks" ng-model="sDeck" ng-change="update()"></select>
   		</div>
-		<a class="item item-icon-right" href="#/setup/phase1"> 
-			4. Start Phase 1 <i class="icon ion-arrow-right-c"></i>
-		</a>
 	</div>
 
   </ion-content>
