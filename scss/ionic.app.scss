@@ -15,7 +15,7 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
-$stable: #c1c469 !default;
+$stable: #dadec3 !default;
 $balanced: #69743a !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
@@ -64,7 +64,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	}
 }
 
-.checkbox {
+.checkbox, .player {
 	&.red {
 		background-color: #FF0000;
 	}
@@ -85,5 +85,31 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	}
 	&.green {
 		background-color: #0B610B;
+	}
+}
+
+.player {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin: 0 4px 0 0;
+}
+
+.table {
+	background-color: $stable;
+	.row {
+		border-bottom: 2px solid $stable;
+	}
+	.col {
+		background-color: #aabc94;
+		text-align: center;
+		border-left: 2px solid $stable;
+	}
+	.col.header {
+		min-width: 50%;
+		font-weight: bold;
+		background-color: transparent;
+		text-align: right;
+		border-left: 0 none;
 	}
 }

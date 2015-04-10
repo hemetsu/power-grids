@@ -26,7 +26,9 @@ angular.module('PGControllers', [])
 
 	/* Generated vars */
 
+	$scope.numRemovedPlants = 0;
 	$scope.numRegions = 0;
+	$scope.numCitiesOwned = 3;
 	$scope.numCitiesForPhaseTwo = 0;
 	$scope.numCitiesForEndGame = 0;
 	$scope.startingMoney = 50;
@@ -68,22 +70,44 @@ angular.module('PGControllers', [])
 		// Calculate regions and limits
 		switch ($scope.sPlayers.length) {
 			case 2:
+				$scope.numRemovedPlants = 8;
 				$scope.numRegions = 3;
+				$scope.numCitiesOwned = 4;
 				$scope.numCitiesForPhaseTwo = 10;
 				$scope.numCitiesForEndGame = 21;
 				break;
-			case 5:
+			case 3:
+				$scope.numRemovedPlants = 8;
 				$scope.numRegions = $scope.sPlayers.length;
+				$scope.numCitiesOwned = 3;
+				$scope.numCitiesForPhaseTwo = 7;
+				$scope.numCitiesForEndGame = 17;
+				break;
+			case 4:
+				$scope.numRemovedPlants = 4;
+				$scope.numRegions = $scope.sPlayers.length;
+				$scope.numCitiesOwned = 3;
+				$scope.numCitiesForPhaseTwo = 7;
+				$scope.numCitiesForEndGame = 17;
+				break;
+			case 5:
+				$scope.numRemovedPlants = 0;
+				$scope.numRegions = $scope.sPlayers.length;
+				$scope.numCitiesOwned = 3;
 				$scope.numCitiesForPhaseTwo = 7;
 				$scope.numCitiesForEndGame = 15;
 				break;
 			case 6:
+				$scope.numRemovedPlants = 0;
 				$scope.numRegions = 5;
+				$scope.numCitiesOwned = 3;
 				$scope.numCitiesForPhaseTwo = 6;
 				$scope.numCitiesForEndGame = 14;
 				break;
 			default:
+				$scope.numRemovedPlants = 0;
 				$scope.numRegions = $scope.sPlayers.length;
+				$scope.numCitiesOwned = 3;
 				$scope.numCitiesForPhaseTwo = 7;
 				$scope.numCitiesForEndGame = 17;
 		}

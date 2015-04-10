@@ -1,35 +1,45 @@
 <ion-view view-title="Phase 1">
   <ion-content has-header="true" padding="true">
 
-  	<div class="row">
-  		<div class="col">Number of regions</div>
-  		<div class="col">{{ numRegions }}</div>
-  	</div>
-  	<div class="row">
-  		<div class="col">Number of connected cities to trigger step 2</div>
-  		<div class="col">{{ numCitiesForPhaseTwo }}</div>
-  	</div>
-  	<div class="row">
-  		<div class="col">Number of connected cities to trigger end game</div>
-  		<div class="col">{{ numCitiesForEndGame }}</div>
-  	</div>
-  	<div class="row">
-  		<div class="col">Starting Money</div>
-  		<div class="col">{{ startingMoney }}</div>
-  	</div>
-  	<div class="row">
-  		<div class="col">Starting Resources</div>
-  		<div class="col">{{ startingResources }}</div>
-  	</div>
+  	<div class="table">
+	  	<div class="row">
+	  		<div class="col header">Number of random plants to remove</div>
+	  		<div class="col">{{ numRemovedPlants }}</div>
+	  	</div>
+	  	<div class="row">
+	  		<div class="col header">Number of chosen regions on map</div>
+	  		<div class="col">{{ numRegions }}</div>
+	  	</div>
+	  	<div class="row">
+	  		<div class="col header">Number of plants a player can own up to</div>
+	  		<div class="col">{{ numCitiesOwned }}</div>
+	  	</div>
+	  	<div class="row">
+	  		<div class="col header">Number of connected cities to trigger step 2</div>
+	  		<div class="col">{{ numCitiesForPhaseTwo }}</div>
+	  	</div>
+	  	<div class="row">
+	  		<div class="col header">Number of connected cities to trigger end game</div>
+	  		<div class="col">{{ numCitiesForEndGame }}</div>
+	  	</div>
+	  	<div class="row">
+	  		<div class="col header">Starting Money</div>
+	  		<div class="col">{{ startingMoney }}</div>
+	  	</div>
+	  	<div class="row">
+	  		<div class="col header">Starting Resource Costs</div>
+	  		<div class="col" ng-repeat="cost in startingResources">{{ cost }}</div>
+	  	</div>
 
-	<div class="row">
-  		<div class="col">Regions Selected</div>
-  		<div class="col">{{ sRegions }}</div>
+		<div class="row">
+	  		<div class="col header">Regions Selected</div>
+	  		<div class="col" ng-repeat="region in sRegions">{{ region }}</div>
+	  	</div>
+	  	<div class="row">
+	  		<div class="col header">Player order</div>
+	  		<div class="col"><span ng-repeat="player in playerOrder" class="player {{ player }}"></span></div>
+	  	</div>
   	</div>
-  	<div class="row">
-  		<div class="col">Player order</div>
-  		<div class="col">{{ playerOrder }}</div>
-  	</div>  	
 
   </ion-content>
 </ion-view>
