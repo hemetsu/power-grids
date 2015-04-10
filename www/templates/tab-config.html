@@ -18,11 +18,11 @@
   		</div> -->
   		<div class="item item-input item-select">
   			<div class="input-label">Map</div>
-			<select ng-options="map as map.name for map in maps" ng-model="sMap" ng-change="update()"></select>
+			<select ng-options="map as map.name for map in maps track by map.id" ng-model="sMap" ng-change="update()"></select>
   		</div>
   		<div class="item item-input item-select">
   			<div class="input-label">Deck</div>
-			<select ng-options="deck as deck.name for deck in decks" ng-model="sDeck" ng-change="update()"></select>
+			<select ng-options="deck as deck.name for deck in decks track by deck.id" ng-model="sDeck" ng-change="update()"></select>
   		</div>
 	</div>
 

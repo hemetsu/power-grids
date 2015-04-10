@@ -3,17 +3,34 @@ angular.module('PGServices', [])
 .factory('Utilities', function() {
   return {
     randomSelect : function(array, num) {
-      var results = [];
-      var tempArray = array;
+      var results = [],
+          tempArray = angular.copy(array);
       while (num > 0) {
         var index = Math.floor(Math.random() * tempArray.length);
         results.push(tempArray[index]);
-        tempArray.splice(index);
+        tempArray.splice(index, 1);
         num--;
       }
       return results;
     }
   };
+})
+
+.factory('$localstorage', function($window) {
+  return {
+    set: function(key, value) {
+      $window.localStorage[key] = value;
+    },
+    get: function(key, defaultValue) {
+      return $window.localStorage[key] || defaultValue;
+    },
+    setObject: function(key, value) {
+      $window.localStorage[key] = JSON.stringify(value);
+    },
+    getObject: function(key, defaultObject) {
+      return ($window.localStorage[key]) ? JSON.parse($window.localStorage[key]) : defaultObject;
+    }
+  }
 })
 
 .factory('Resources', function() {

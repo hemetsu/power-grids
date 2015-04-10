@@ -1,6 +1,35 @@
 <ion-view view-title="Phase 1">
   <ion-content has-header="true" padding="true">
-  	
+
+  	<div class="row">
+  		<div class="col">Number of regions</div>
+  		<div class="col">{{ numRegions }}</div>
+  	</div>
+  	<div class="row">
+  		<div class="col">Number of connected cities to trigger step 2</div>
+  		<div class="col">{{ numCitiesForPhaseTwo }}</div>
+  	</div>
+  	<div class="row">
+  		<div class="col">Number of connected cities to trigger end game</div>
+  		<div class="col">{{ numCitiesForEndGame }}</div>
+  	</div>
+  	<div class="row">
+  		<div class="col">Starting Money</div>
+  		<div class="col">{{ startingMoney }}</div>
+  	</div>
+  	<div class="row">
+  		<div class="col">Starting Resources</div>
+  		<div class="col">{{ startingResources }}</div>
+  	</div>
+
+	<div class="row">
+  		<div class="col">Regions Selected</div>
+  		<div class="col">{{ sRegions }}</div>
+  	</div>
+  	<div class="row">
+  		<div class="col">Player order</div>
+  		<div class="col">{{ playerOrder }}</div>
+  	</div>  	
 
   </ion-content>
 </ion-view>
